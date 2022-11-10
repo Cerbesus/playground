@@ -153,22 +153,22 @@
 <!-- Update -->
 <?php
 
-  //?Update
-  // try {
-  //   $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username, '');
-  //   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  // ?Update
+  try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username, '');
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
   //     //TODO SQL PARA HACER UPDATE
-  //     $sql = "UPDATE Usuarios SET id=1 WHERE contrasena='Giraldo'";
-  //     //Preparar consulta
-  //     $stmt = $conn->prepare($sql);
-  //     //Se ejecuta la consulta
-  //     $stmt->execute();
+      $sql = "UPDATE Usuarios SET id=1 WHERE contrasena='Giraldo'";
+      //Preparar consulta
+      $stmt = $conn->prepare($sql);
+      //Se ejecuta la consulta
+      $stmt->execute();
   
-  //   echo $stmt->rowCount() . " registros actualizados correctamente";
-  // } catch(PDOException $e) {
-  //   echo $sql . "<br>" . $e->getMessage();
-  // }
+    echo $stmt->rowCount() . " registros actualizados correctamente";
+  } catch(PDOException $e) {
+    echo $sql . "<br>" . $e->getMessage();
+  }
 ?>
 <!-- Cerrar conexión con servidor -->
 <?php

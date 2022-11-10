@@ -74,7 +74,7 @@
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         //TODO:Toda la tabla
-        $stmt = $conn->prepare("SELECT id, nombre, passwd FROM usuarios");
+        $stmt = $conn->prepare("SELECT * FROM usuarios");
         
         //TODO: Dato con where
         //$stmt = $conn->prepare("SELECT id, nombre, contrasena FROM Usuarios WHERE contrasena='Doe'");
